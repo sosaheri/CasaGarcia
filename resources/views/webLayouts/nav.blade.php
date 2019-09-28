@@ -15,8 +15,8 @@
           
           <li class="menu-active"><a href="{{url('/')}}">Inicio</a></li>
           <li><a href="{{url('/sociales')}}">Sociales</a></li>
-
-          <li class="buy-tickets"><a href="#contact">Contáctanos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+          <li class="buy-tickets"><a href="#">Descarga nuestro CV</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>

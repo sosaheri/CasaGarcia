@@ -709,6 +709,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #speakers .speaker .details {
+  padding-top: 20px;
   background: rgba(6, 12, 34, 0.76);
   position: absolute;
   left: 0;
