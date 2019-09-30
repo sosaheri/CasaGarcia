@@ -142,6 +142,18 @@ jQuery(document).ready(function( $ ) {
         singleItem:true
     });
 
+    $("#owl-demo-home").owlCarousel({
+      loop:true,
+      autoplay: true,
+      navigation : true, // Show next and prev buttons
+      slideSpeed : 500,
+      paginationSpeed : 400,
+      singleItem:true,
+      responsive: { 0: { items: 1 }, 768: { items: 1 }, 992: { items: 1 }, 1200: {items: 1}
+    }
+      
+  });
+
 
   // Buy tickets select the ticket type on click
   $('#buy-ticket-modal').on('show.bs.modal', function (event) {

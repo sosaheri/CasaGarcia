@@ -7,31 +7,50 @@
 
     <div class="sidebar-wrapper">
         <div class="logo">
-            <a href="http://www.creative-tim.com" class="simple-text">
-                Creative Tim
+            <a href="{{ url('/')}}" class="simple-text">
+                Casa Garcia
             </a>
         </div>
 
         <ul class="nav">
             <li class="active">
-                <a href="dashboard.html">
+                <a href="{{url('administrador')}}">
                     <i class="ti-panel"></i>
                     <p>Dashboard</p>
                 </a>
             </li>
-         
             <li>
-                    <a href="{{url('crearImagen')}}">
-                        <i class="ti-view-list-alt"></i>
-                        <p>Cargar Media</p>
-                    </a>
-                </li>
-                <li>
-                        <a href="{{url('listarImagen')}}">
-                            <i class="ti-view-list-alt"></i>
-                            <p>Listar Media</p>
+                    <a href="#">
+                            
+                            <p><small>MEDIA</small></p>
+                            
                         </a>
-                    </li>
+                </li>       
+            <li>
+                <a href="{{url('crearImagen')}}">
+                        <i class="ti-view-list-alt"></i>
+                            <p>Cargar Media</p>
+                    </a>
+            </li>
+            <li>
+                <a href="{{url('listarImagen')}}">
+                    <i class="ti-view-list-alt"></i>
+                    <p>Listar Media</p>
+                </a>
+            </li>
+            <li>
+                    <a href="#">
+                           
+                            <p><small>ENLACES</small></p>
+                            
+                        </a>
+                </li> 
+            <li>
+                <a href="{{url('enlaces')}}">
+                    <i class="ti-view-list-alt"></i>
+                    <p>Configurar Enlaces</p>
+                </a>
+            </li>            
                 
             <li>
                 <a href="{{ route('logout') }}">

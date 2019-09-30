@@ -14,93 +14,83 @@
             <div class="content">
                     <div class="container-fluid">
                             <div class="row">
+
+                                    @if ($message = Session::get('success'))
+                                    <div class="alert alert-success">
+                                        <p>{{ $message }}</p>
+                                    </div>
+                                    @endif
+
+                                    @if ($message = Session::get('error'))
+                                    <div class="alert alert-alert">
+                                        <p>{{ $message }}</p>
+                                    </div>
+                                    @endif
                                 
                                 <div class="col-lg col-md">
                                     <div class="card">
-                                        <div class="header">
-                                            <h4 class="title">Edit Profile</h4>
-                                        </div>
+                                        
                                         <div class="content">
-                                            <form>
-                                                <div class="row">
-                                                    <div class="col-md-5">
-                                                        <div class="form-group">
-                                                            <label>Company</label>
-                                                            <input type="text" class="form-control border-input" disabled placeholder="Company" value="Creative Code Inc.">
-                                                        </div>
+                                        <form method="POST" action="{{ route('guardarEnlaces')}}">
+                                                
+                                                
+                                                <div class="header">
+                                                        <h4 class="title">Enlaces para slider</h4><br>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Username</label>
-                                                            <input type="text" class="form-control border-input" placeholder="Username" value="michael23">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label for="exampleInputEmail1">Email address</label>
-                                                            <input type="email" class="form-control border-input" placeholder="Email">
-                                                        </div>
-                                                    </div>
-                                                </div>
-            
+                                                
+                                                    @php
+                                                        $video = $enlaces;
+                                                        
+                                                    @endphp
+
+                                                    
+                                                    
+                                                
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label>First Name</label>
-                                                            <input type="text" class="form-control border-input" placeholder="Company" value="Chet">
+                                                            <label>Enlace Youtube del video 1</label>
+                                                        <input type="text" name="slider1" class="form-control border-input" value="{{ $video[0]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                            <label>Enlace Youtube del video 2</label>
+                                                            <input type="text" name="slider2" class="form-control border-input" value="{{ $video[1]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                            <label>Enlace Youtube del video 3</label>
+                                                            <input type="text" name="slider3" class="form-control border-input" value="{{ $video[2]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                        
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label>Last Name</label>
-                                                            <input type="text" class="form-control border-input" placeholder="Last Name" value="Faker">
-                                                        </div>
-                                                    </div>
+ 
                                                 </div>
-            
+
+                                                <div class="header">
+                                                        <h4 class="title">Enlaces páginas de eventos</h4>
+                                                    </div>
+
                                                 <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label>Address</label>
-                                                            <input type="text" class="form-control border-input" placeholder="Home Address" value="Melbourne, Australia">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                            <label>Enlace Youtube página de sociales</label>
+                                                            <input type="text" name="v1" class="form-control border-input" value="{{ $video[3]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                            <label>Enlace Youtube página de gubernamentales</label>
+                                                            <input type="text" name="v2" class="form-control border-input" value="{{ $video[4]->url }}"placeholder="coloque su enlace youtube" >
+                                                        
+                                                            <label>Enlace Youtube página de empresariales</label>
+                                                            <input type="text" name="v3" class="form-control border-input" value="{{ $video[5]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                            <label>Enlace Youtube página de catering / inmobiliario</label>
+                                                            <input type="text" name="v4" class="form-control border-input" value="{{ $video[6]->url }}" placeholder="coloque su enlace youtube" >
+                                                        
+                                                            </div>
                                                         </div>
+     
                                                     </div>
-                                                </div>
             
-                                                <div class="row">
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>City</label>
-                                                            <input type="text" class="form-control border-input" placeholder="City" value="Melbourne">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Country</label>
-                                                            <input type="text" class="form-control border-input" placeholder="Country" value="Australia">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-4">
-                                                        <div class="form-group">
-                                                            <label>Postal Code</label>
-                                                            <input type="number" class="form-control border-input" placeholder="ZIP Code">
-                                                        </div>
-                                                    </div>
-                                                </div>
-            
-                                                <div class="row">
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label>About Me</label>
-                                                            <textarea rows="5" class="form-control border-input" placeholder="Here can be your description" value="Mike">Oh so, your weak rhyme
-            You doubt I'll bother, reading into it
-            I'll probably won't, left to my own devices
-            But that's the difference in our opinions.</textarea>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <div class="text-center">
-                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Update Profile</button>
+                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Actualizar</button>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </form>

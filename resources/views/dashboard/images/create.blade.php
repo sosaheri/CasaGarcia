@@ -55,7 +55,13 @@
                                                                 <option value="sociales">Sociales</option>
                                                                 <option value="gubernamental">Gubernamental</option>
                                                                 <option value="empresarial">Empresarial</option>
-                                                                <option value="catering-inmobiliario">Catering / Inmobiliario</option>
+                                                                <option value="carpas">Carpas</option>
+                                                                <option value="cuadrada">Mesas Cuadradas</option>
+                                                                <option value="mesa-vintage">Mesa Vintage</option>
+                                                                <option value="Periquera">Periquera</option>
+                                                                <option value="sala-vintage">Sala Vintage</option>
+                                                                <option value="lounge">Sala Lounge</option>
+                                                                <option value="bocadillos">Bocadillos</option>
                                                                 </select>
                                                             </div>
                                                         </div>

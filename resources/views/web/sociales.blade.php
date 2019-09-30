@@ -7,11 +7,11 @@
     Intro Section
   ============================-->
   <section id="intro">
-    <div class="intro-container wow fadeIn">
+    {{-- <div class="intro-container wow fadeIn">
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
 
-    </div>
+    </div> --}}
   </section>
 
 <main id="main">
@@ -22,7 +22,7 @@
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h2>Eventos Sociales</h2>
+          <h2>Carpas</h2>
           <p>Praesentium ut qui possimus sapiente nulla.</p>
         </div>
 

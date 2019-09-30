@@ -19,7 +19,13 @@ Route::get('/', function () {
 
 
 Route::get('/', 'HomeController@index');
-Route::get('/sociales', 'HomeController@sociales')->name('sociales');
+Route::get('/carpas', 'HomeController@carpas')->name('carpas');
+Route::get('/cuadrada', 'HomeController@cuadrada')->name('cuadrada');
+Route::get('/mesaVintage', 'HomeController@mesaVintage')->name('mesaVintage');
+Route::get('/periquera', 'HomeController@periquera')->name('periquera');
+Route::get('/sala-vintage', 'HomeController@salaVintage')->name('sala-vintage');
+Route::get('/lounge', 'HomeController@lounge')->name('lounge');
+Route::get('/bocadillos', 'HomeController@bocadillos')->name('bocadillos');
 
 Auth::routes();
 
@@ -43,5 +49,8 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('crearImagen','MediaController@create')->name('crearImagen');
     Route::post('guardarImagen','MediaController@store')->name('guardarImagen');
     Route::get('eliminarImagen/{id}','MediaController@destroy')->name('eliminarImagen');
+
+    Route::get('enlaces','MediaController@createEnlace')->name('enlaces');
+    Route::post('guardarEnlaces','MediaController@guardarEnlaces')->name('guardarEnlaces');
 
 });
