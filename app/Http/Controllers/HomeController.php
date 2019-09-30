@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Medias;
 
 class HomeController extends Controller
 {
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+       
     }
 
     /**
@@ -23,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $medias = Medias::latest()->paginate(8);
+
+        return view('web.home', compact('medias'))
+            ->with('i', (request()->input('page', 1) - 1) * 8);
     }
+
+
+    public function sociales()
+    {
+            $medias = Medias::where('category', '=', 'sociales')->get();
+            
+            return view('web.sociales', compact('medias'))
+                ->with('i', (request()->input('page', 1) - 1) * 8);
+    }
+
 }

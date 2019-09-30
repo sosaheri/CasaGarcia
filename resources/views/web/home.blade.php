@@ -13,33 +13,23 @@
           <h1 class="mb-4 pb-0">Nuestros<br><span>Eventos Sociales</span></h1>
           <a href="https://www.youtube.com/watch?v=z-5r-VoECAE" class="venobox play-btn mb-4" data-vbtype="video"
             data-autoplay="true"></a>
+          
+            <div id="owl-banner" class="owl-carousel owl-theme">
+              <div class="item">
+                <a href="https://www.youtube.com/watch?v=z-5r-VoECAE" class="venobox play-btn mb-4" data-vbtype="video"
+                data-autoplay="true"></a>
+              </div>
+
+              <div class="item">
+                <a href="https://www.youtube.com/watch?v=z-5r-VoECAE" class="venobox play-btn mb-4" data-vbtype="video"
+                data-autoplay="true"></a>
+              </div>
+              </div>
+
           <a href="#about" class="about-btn scrollto">Ver más</a>
         </div>
 
-    <div id="owl-banner" class="owl-carousel owl-theme">
-      <div class="item">
-          <div class="intro-container wow fadeIn">
-              <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-              <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a>
-              <a href="#about" class="about-btn scrollto">About The Event</a>
-            </div>
-      </div>
-
-      <div class="item">
-          <div class="intro-container wow fadeIn">
-              <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-              <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
-              <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-                data-autoplay="true"></a>
-              <a href="#about" class="about-btn scrollto">About The Event</a>
-            </div>
-      </div>
-
-
-
-    </div>
+   
   </section>
 
 
@@ -73,7 +63,7 @@
       <!--==========================
         Speakers Section
       ============================-->
-      <section id="speakers" class="wow fadeInUp">
+      <section id="catalogo" class="wow fadeInUp">
         <div class="container">
           <div class="section-header">
             <h2>Catalogo</h2>
@@ -83,23 +73,12 @@
           <div class="row">
             <div class="col-lg-2 col-md-6">  
             </div>
+
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <img src="{{ asset('web') }}/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+                <img src="{{ asset('web') }}/img/eventos/social.jpg" alt="Speaker 2" class="img-fluid">
                 <div class="details">
-                  <h3><a href="speaker-details.html">Eventos Gubernamentales</a></h3>
-                  
-                  <div class="social">
-                    <p>Ver Más</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="speaker">
-                <img src="{{ asset('web') }}/img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
-                <div class="details">
-                  <h3><a href="speaker-details.html">Eventos Sociales</a></h3>
+                  <h3><a href="{{ url('sociales') }}">Eventos Sociales</a></h3>
                                     
                   <div class="social">
                       <p>Ver Más</p>
@@ -107,13 +86,26 @@
                 </div>
               </div>
             </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="speaker">
+                  <img src="{{ asset('web') }}/img/eventos/gubernamental.jpg" alt="Speaker 1" class="img-fluid">
+                  <div class="details">
+                    <h3><a href="{{ url('gubernamentales') }}">Eventos Gubernamentales</a></h3>
+                    
+                    <div class="social">
+                      <p>Ver Más</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             <div class="col-lg-2 col-md-6"></div>
             <div class="col-lg-2 col-md-6"></div>
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <img src="{{ asset('web') }}/img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
+                <img src="{{ asset('web') }}/img/eventos/empresarial.jpg" alt="Speaker 3" class="img-fluid">
                 <div class="details">
-                  <h3><a href="speaker-details.html">Eventos Empresariales</a></h3>
+                  <h3><a href="{{ url('empresariales') }}">Eventos Empresariales</a></h3>
                   
                   <div class="social">
                       <p>Ver Más</p>
@@ -123,9 +115,9 @@
             </div>
             <div class="col-lg-4 col-md-6">
               <div class="speaker">
-                <img src="{{ asset('web') }}/img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
+                <img src="{{ asset('web') }}/img/eventos/catering.jpg" alt="Speaker 4" class="img-fluid">
                 <div class="details">
-                  <h3><a href="speaker-details.html">Catering / Mobiliario</a></h3>
+                  <h3><a href="{{ url('sociales') }}">Catering / Mobiliario</a></h3>
                                     
                   <div class="social">
                       <p>Ver Más</p>
@@ -144,7 +136,7 @@
       <!--==========================
         Venue Section
       ============================-->
-      <section id="venue" class="wow fadeInUp">
+      <section id="eventos" class="wow fadeInUp">
 
         <div class="container-fluid">
 
@@ -156,15 +148,15 @@
           <div class="row no-gutters">
             
             <div class="col-lg-6 venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
-                <img src="{{ asset('web') }}/img/venue-gallery/1.jpg" alt="" class="img-fluid">
+                <a href="{{ asset('web') }}/img/eventos/social.jpg" class="venobox" data-gall="venue-gallery">
+                <img src="{{ asset('web') }}/img/eventos/social.jpg" alt="" class="img-fluid">
               </a>
             </div>
 
             <div class="col-lg-6 venue-info">
               <div class="row justify-content-center">
                 <div class="col-11 col-lg-8">
-                  <h3>Downtown Conference Center, New York</h3>
+                  <h3>Seleccion de nuestros Mejores Eventos</h3>
                   <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
                 </div>
               </div>
@@ -176,69 +168,19 @@
         <div class="container-fluid venue-gallery-container">
           <div class="row no-gutters">
 
+            @foreach ($medias as $media)
+                
+            
             <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/1.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/1.jpg" alt="" class="img-fluid">
+              <div class="venue-gallery grid">
+                  
+                <a href="{{ asset('storage') }}/{{ $media->url }}" class="venobox" data-gall="venue-gallery">
+                  <img src="{{ asset('storage') }}/{{ $media->url }}" alt="" class="img-fluid">
                 </a>
               </div>
             </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/2.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/2.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/3.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/3.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/4.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/4.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/5.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/5.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/6.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/6.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/7.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/7.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-4">
-              <div class="venue-gallery">
-                <a href="{{ asset('web') }}/img/venue-gallery/8.jpg" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('web') }}/img/venue-gallery/8.jpg" alt="" class="img-fluid">
-                </a>
-              </div>
-            </div>
+            @endforeach
+            
 
           </div>
 

@@ -19,33 +19,22 @@
                     <p>Dashboard</p>
                 </a>
             </li>
-            <li>
-                <a href="user.html">
-                    <i class="ti-user"></i>
-                    <p>User Profile</p>
-                </a>
-            </li>
-            <li>
-                <a href="table.html">
-                    <i class="ti-view-list-alt"></i>
-                    <p>Table List</p>
-                </a>
-            </li>
+         
             <li>
                     <a href="{{url('crearImagen')}}">
                         <i class="ti-view-list-alt"></i>
-                        <p>Crear Imagen</p>
+                        <p>Cargar Media</p>
                     </a>
                 </li>
                 <li>
                         <a href="{{url('listarImagen')}}">
                             <i class="ti-view-list-alt"></i>
-                            <p>listar Imagen</p>
+                            <p>Listar Media</p>
                         </a>
                     </li>
                 
             <li>
-                <a href="table.html">
+                <a href="{{ route('logout') }}">
                         <i class="ti-power-off"></i>
                         <p>Salir</p>
                     </a>

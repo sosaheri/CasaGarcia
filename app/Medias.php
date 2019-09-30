@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Medias extends Model
 {
     protected $fillable = [
-        'id','url', 'type'
+        'id','url', 'type', 'category'
     ];
 
     public function getUrlPathAttribute(){

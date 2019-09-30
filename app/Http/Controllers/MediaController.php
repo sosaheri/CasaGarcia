@@ -12,12 +12,11 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $medias = Medias::latest()->paginate(5);
+    public function index(){
+        $medias = Medias::latest()->paginate(30);
 
         return view('dashboard.images.index', compact('medias'))
-            ->with('i', (request()->input('page', 1) - 1) * 5);
+            ->with('i', (request()->input('page', 1) - 1) * 30);
     }
 
     /**
@@ -25,8 +24,7 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
+    public function create(){
         return view('dashboard.images.create');
     }
 
@@ -43,7 +41,9 @@ class MediaController extends Controller
         $request->validate([
             'ruta' => 'required',
             'type' => 'required',
+            'category' => 'required',
         ]);
+        
 
         if($request->hasFile('ruta')){
             $path = $request->ruta->store('public');
@@ -51,6 +51,7 @@ class MediaController extends Controller
             Medias::create([
                 'url' => $path,
                 'type' => $request->type,
+                'category' => $request->category,
             ]);
             return redirect()->route('listarImagen')
                    ->with('success','Imagen Guardada exitosamente.');

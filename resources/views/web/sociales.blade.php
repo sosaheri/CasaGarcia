@@ -1,8 +1,6 @@
 @extends('webLayouts.app')
 
 
-
-
 @section('content')
 
   <!--==========================
@@ -10,11 +8,9 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <h1 class="mb-4 pb-0">The Annual<br><span>Marketing</span> Conference</h1>
-      <p class="mb-4 pb-0">10-12 December, Downtown Conference Center, New York</p>
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
-      <a href="#about" class="about-btn scrollto">About The Event</a>
+
     </div>
   </section>
 
@@ -26,18 +22,18 @@
     <section id="speakers-details" class="wow fadeIn">
       <div class="container">
         <div class="section-header">
-          <h2>Speaker Details</h2>
+          <h2>Eventos Sociales</h2>
           <p>Praesentium ut qui possimus sapiente nulla.</p>
         </div>
 
         <div class="row">
           <div class="col-md-6">
-            <img src="{{ asset('web') }}/img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+            <img src="{{ asset('web') }}/img/eventos/social.jpg" alt="Speaker 1" class="img-fluid">
           </div>
 
           <div class="col-md-6">
             <div class="details">
-              <h2>Brenden Legros</h2>
+              
               <div class="social">
                 <a href=""><i class="fa fa-twitter"></i></a>
                 <a href=""><i class="fa fa-facebook"></i></a>
@@ -63,22 +59,22 @@
 
       <div class="container">
         <div class="section-header">
-          <h2>Gallery</h2>
-          <p>Check our gallery from the recent events</p>
+          <h2>Galeria</h2>
+          <p>Ve nuestros últimos eventos</p>
         </div>
       </div>
 
+     
+          
+      
       <div class="owl-carousel gallery-carousel">
-        <a href="{{ asset('web') }}/img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/1.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/2.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/3.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/4.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/5.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/6.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/7.jpg" alt=""></a>
-        <a href="{{ asset('web') }}/img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="{{ asset('web') }}/img/gallery/8.jpg" alt=""></a>
+          @foreach ($medias as $media)
+          <a href="{{ asset('storage') }}/{{ $media->url }}" class="venobox" data-gall="gallery-carousel">
+          <img class="galeria" src="{{ asset('storage') }}/{{ $media->url }}" alt=""></a>
+          @endforeach
       </div>
 
+      
     </section>
 
 @include('webLayouts.faq')

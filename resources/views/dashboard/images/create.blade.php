@@ -30,7 +30,7 @@
                                 <div class="col-lg col-md">
                                     <div class="card">
                                         <div class="header">
-                                            <h4 class="title">Crear Imagen</h4>
+                                            <h4 class="title">Cargar Media</h4>
                                         </div>
                                         <div class="content">
                                         <form method="POST" action="{{ route('guardarImagen')}}" accept-charset="UTF-8" enctype="multipart/form-data">
@@ -47,11 +47,24 @@
  
                                                 </div>
 
-                                               
+                                                <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div class="form-group">
+                                                                <label>Elegir Categoria</label>
+                                                                <select name="category" id="category" class="form-control border-input">
+                                                                <option value="sociales">Sociales</option>
+                                                                <option value="gubernamental">Gubernamental</option>
+                                                                <option value="empresarial">Empresarial</option>
+                                                                <option value="catering-inmobiliario">Catering / Inmobiliario</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+     
+                                                    </div>
             
                                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                                 <div class="text-center">
-                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Guardar Imagen</button>
+                                                    <button type="submit" class="btn btn-info btn-fill btn-wd">Guardar</button>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </form>

@@ -15,26 +15,33 @@ Route::get('/', function () {
     return view('web.home');
 });
 
-Route::get('/sociales', function () {
-    return view('web.sociales');
-});
 
 
+
+Route::get('/', 'HomeController@index');
+Route::get('/sociales', 'HomeController@sociales')->name('sociales');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => ['auth']], function() {
 
 
-Route::get('/administrador', function () {
-    return view('dashboard.dashboard');
+    Route::get('logout', 'Auth\LoginController@logout', function () {
+        return abort(404);
+    });
+    
+    
+    Route::get('/administrador', function () {
+        return view('dashboard.dashboard');
+    });
+    
+    
+    
+    //Route::resource('medias','MediaController');
+    Route::get('listarImagen','MediaController@index')->name('listarImagen');
+    Route::get('crearImagen','MediaController@create')->name('crearImagen');
+    Route::post('guardarImagen','MediaController@store')->name('guardarImagen');
+    Route::get('eliminarImagen/{id}','MediaController@destroy')->name('eliminarImagen');
+
 });
-
-
-
-//Route::resource('medias','MediaController');
-Route::get('listarImagen','MediaController@index')->name('listarImagen');
-Route::get('crearImagen','MediaController@create')->name('crearImagen');
-Route::post('guardarImagen','MediaController@store')->name('guardarImagen');
-Route::get('eliminarImagen/{id}','MediaController@destroy')->name('eliminarImagen');
-
