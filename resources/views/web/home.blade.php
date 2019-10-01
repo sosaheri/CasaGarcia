@@ -210,6 +210,17 @@
             
           </div>
 
+
+          <div class="menu">
+              <ul>
+                <li class="todos active"><a href="#" class="btn-menu" data-filter="todos">Todos</a></li>
+                <li class="sociales"><a href="#" class="btn-menu" data-filter="sociales">Sociales</a></li>
+                <li class="gubernamental"><a href="#" class="btn-menu" data-filter="gubernamental">Gubernamentales</a></li>
+                <li class="empresarial"><a href="#" class="btn-menu" data-filter="empresarial">Empresariales</a></li>
+
+              </ul>
+            </div>
+
           <div class="row no-gutters">
             
             <div class="col-lg-6 venue-gallery">
@@ -230,6 +241,8 @@
 
         </div>
 
+
+
         <div class="container-fluid venue-gallery-container">
           <div class="row no-gutters">
 
@@ -240,10 +253,11 @@
             
             <div class="col-lg-3 col-md-4">
               <div class="venue-gallery grid">
-                  
-                <a href="{{ asset('storage') }}/{{ $media->url }}" class="venobox" data-gall="venue-gallery">
-                  <img src="{{ asset('storage') }}/{{ $media->url }}" alt="" class="img-fluid">
-                </a>
+                  <div class="box-img {{ $media->category }}">
+                        <a href="{{ asset('storage') }}/{{ $media->url }}" class="venobox" data-gall="venue-gallery">
+                          <img src="{{ asset('storage') }}/{{ $media->url }}" alt="" class="img-fluid">
+                        </a>
+                  </div>
               </div>
             </div>
 

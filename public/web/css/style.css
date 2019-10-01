@@ -1552,6 +1552,35 @@ img.galeria {
   height: 170px;
 }
 
+.menu ul {
+	list-style: none;
+	width: 100%;
+	display: table;
+}
+
+.menu ul li {
+	display: table-cell;
+	width: calc(30px * 5)
+}
+
+.menu ul li:hover {
+	background: rgba(0,0,0,.9);
+}
+
+.menu ul li a {
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.menu ul .todos {background: #3691be;}
+.menu ul .sociales {background: #106288;}
+.menu ul .empresarial {background: #0b4661;}
+.menu ul .gubernamental {background: #093144;}
+
+
 /*--------------------------------------------------------------
 # Responsive Media Queries
 --------------------------------------------------------------*/
