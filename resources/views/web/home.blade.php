@@ -235,9 +235,8 @@
 
             @foreach ($medias as $media)
                 
-            @if ($media->type != 'video')
-                
-            
+            @if ($media->type != 'video' && ($media->category == 'sociales' || $media->category == 'gubernamental' || $media->category == 'empresarial'))
+                           
             
             <div class="col-lg-3 col-md-4">
               <div class="venue-gallery grid">

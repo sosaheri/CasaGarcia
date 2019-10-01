@@ -7,7 +7,8 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="{{ asset('web') }}/img/logo.png" alt="TheEvenet">
+            <a href="{{ url('administrador')}}">
+            <img src="{{ asset('web') }}/img/logo.png" alt="TheEvenet"></a>
             <p>Esto es parte del servicio que ofrecemos dentro de esta empresa dedicada a los banquetes y eventos sociales, esperando sea de tu agrado, quedamos a tus órdenes para cualquier dudad o aclaración.</p>
           </div>
 
@@ -45,12 +46,7 @@
     <div class="container">
       
       <div class="credits">
-        <!--
-          All the links in the footer should remain intact.
-          You can delete the links only if you purchased the pro version.
-          Licensing information: https://bootstrapmade.com/license/
-          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=TheEvent
-        -->
+
         Designed by <a href="https://larepaweb.com.ve/">Arepa Web Group</a>
       </div>
     </div>

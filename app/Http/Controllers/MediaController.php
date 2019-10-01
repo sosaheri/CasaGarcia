@@ -76,6 +76,18 @@ class MediaController extends Controller
              $data = Medias::find(7);
              $data->url = $request->v4;
              $data->save();
+
+             $data = Medias::find(24);
+             $data->url = $request->v5;
+             $data->save();
+
+             $data = Medias::find(25);
+             $data->url = $request->v6;
+             $data->save();
+
+             $data = Medias::find(26);
+             $data->url = $request->v7;
+             $data->save();
                         
          return redirect()->back()->with('success', 'Ha actualizado exitosamente los enlaces de video.');
 
@@ -127,10 +139,8 @@ class MediaController extends Controller
      */
     public function destroy($id){
         
-        $data = Medias::find($id);
-       
+        $data = Faq::find($id);       
         $data->delete();
-
         
   
         return redirect()->route('listarImagen')

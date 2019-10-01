@@ -8,8 +8,14 @@
   ============================-->
   <section id="intro">
     <div class="intro-container wow fadeIn">
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
-        data-autoplay="true"></a>
+      @if ($videos[3]->url == NULL)
+        <a href="https://www.youtube.com/watch?v=z-5r-VoECAE" class="venobox play-btn mb-4" data-vbtype="video"
+      data-autoplay="true"></a>        
+      @else
+      <a href="{{$videos[3]->url}}" class="venobox play-btn mb-4" data-vbtype="video"
+      data-autoplay="true"></a>
+      @endif
+      
 
     </div> 
   </section>

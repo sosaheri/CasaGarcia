@@ -7,12 +7,18 @@
     Intro Section
   ============================-->
   <section id="intro">
-    <div class="intro-container wow fadeIn">
-      <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox play-btn mb-4" data-vbtype="video"
+      <div class="intro-container wow fadeIn">
+        @if ($videos[6]->url == NULL)
+          <a href="https://www.youtube.com/watch?v=z-5r-VoECAE" class="venobox play-btn mb-4" data-vbtype="video"
+        data-autoplay="true"></a>        
+        @else
+        <a href="{{$videos[6]->url}}" class="venobox play-btn mb-4" data-vbtype="video"
         data-autoplay="true"></a>
-
-    </div> 
-  </section>
+        @endif
+        
+  
+      </div> 
+    </section>
 
 <main id="main">
 

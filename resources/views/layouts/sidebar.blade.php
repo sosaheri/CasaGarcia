@@ -51,7 +51,19 @@
                     <p>Configurar Enlaces</p>
                 </a>
             </li>            
-                
+            <li>
+                    <a href="#">
+                           
+                            <p><small>F.A.Q.</small></p>
+                            
+                        </a>
+                </li> 
+            <li>
+                <a href="{{url('listarFaq')}}">
+                    <i class="ti-view-list-alt"></i>
+                    <p>Añadir FAQ</p>
+                </a>
+            </li>                        
             <li>
                 <a href="{{ route('logout') }}">
                         <i class="ti-power-off"></i>

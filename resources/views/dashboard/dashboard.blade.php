@@ -51,6 +51,17 @@
                                         
                                         </blockquote>
                                     </div>
+
+                                    <div class="typo-line">
+                                            <p class="category">F.A.Q.</p>
+                                            <blockquote>
+                                             <p>
+                                             
+                                                El módulo de <strong>F.A.Q.</strong> permite agregar, preguntas y respuestas frecuentes, esta información se visualiza en toda las páginas internas
+                                             </p>
+                                            
+                                            </blockquote>
+                                        </div>
     
                                 </div>
                             </div>

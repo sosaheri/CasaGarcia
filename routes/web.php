@@ -53,4 +53,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::get('enlaces','MediaController@createEnlace')->name('enlaces');
     Route::post('guardarEnlaces','MediaController@guardarEnlaces')->name('guardarEnlaces');
 
+    Route::get('listarFaq','FaqController@index')->name('listarFaq');
+    Route::post('guardarPregunta','FaqController@create')->name('guardarPregunta');
+    Route::get('eliminarPregunta/{id}','FaqController@eliminar')->name('eliminarPregunta');
+    Route::get('editarPregunta/{faq}','FaqController@editar')->name('editarPregunta');
+    Route::post('actualizarPregunta','FaqController@actualizar')->name('actualizarPregunta');
+
 });
